@@ -1,12 +1,9 @@
 #include <iostream>
-#include <windows.h>
 #include <math.h>
 using namespace std;
 
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
 	long double a = 0.1, b = 1, k = 10, shag, y, x, n = 10, SN = 1, SE = 1, EL1, EL2;
 	const double E = 0.0001;
 	x = a;

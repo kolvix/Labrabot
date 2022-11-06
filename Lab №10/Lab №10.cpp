@@ -55,6 +55,7 @@ void CleanArray(int*& arr1, int& size, const int k)
 
 int main()
 {
+	srand(time(NULL));
 	int size, m, k;
 	cout << "enter size array:";
 	cin >> size;

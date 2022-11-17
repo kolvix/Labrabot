@@ -2,15 +2,15 @@
 using namespace std;
 struct Node
 {
-    int x;//информационный элемент
-    Node* Next;//указатель на следующий элемент
+    int x;
+    Node* Next;
 };
 typedef Node* PNode;
 
-void Add(int data, PNode& Head, PNode& LastNode)//добавление
+void Add(int data, PNode& Head, PNode& LastNode)
 
 {
-    PNode Temp;//Temp - новый элемент, LastNode - последний
+    PNode Temp;
 
     if (Head == NULL)
     {
@@ -27,12 +27,12 @@ void Add(int data, PNode& Head, PNode& LastNode)//добавление
     }
     LastNode->x = data;
 }
-void Show(PNode Head)//отображение очереди
+void Show(PNode Head)
 {
-    while (Head != NULL)//пока текущий элемент не NULL
+    while (Head != NULL)
     {
-        cout << Head->x << " ";//выводим поле
-        Head = Head->Next;//переходим к следующему элементу
+        cout << Head->x << " ";
+        Head = Head->Next;
     }
 }
 
@@ -40,15 +40,15 @@ void DeleteNode(PNode& Head, PNode OldNode)
 {
     PNode q = Head;
     if (Head == OldNode)
-        Head = OldNode->Next; // удаляем первый элемент
+        Head = OldNode->Next;
     else
     {
-        while (q && q->Next != OldNode) // ищем элемент
+        while (q && q->Next != OldNode)
             q = q->Next;
         if (q == NULL) return;
         q->Next = OldNode->Next;
     }
-    delete OldNode; // освобождаем память
+    delete OldNode; 
 }
 
 void AddAfter(int data, PNode p, PNode NewNode)
@@ -60,6 +60,7 @@ void AddAfter(int data, PNode p, PNode NewNode)
 
 void main()
 {
+    setlocale(LC_ALL, "ru");
     PNode Head, LastNode;
     int n;
     int k;
@@ -71,13 +72,13 @@ void main()
 
 
     cout << "vvedite spisok \n";
-    for (int i = 0; i < k; i++) //заносим данные в очередь
+    for (int i = 0; i < k; i++) 
     {
         cin >> n;
         Add(n, Head, LastNode);
     }
     cout << "spisok: ";
-    Show(Head);//выводим очередь
+    Show(Head);
     cout << endl;
 
     cout << "vvedite nomer elementa kotorii udalit\n";
@@ -92,7 +93,7 @@ void main()
     for (int i = 0; i < x - 1; i++)
         q = q->Next;
     DeleteNode(Head, q);
-    Show(Head);//выводим очередь
+    Show(Head);
 
     cout << "\nvvedite pod kakim nomerom dobavit element\n";
     int y = -1;

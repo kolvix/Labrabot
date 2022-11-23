@@ -60,7 +60,6 @@ void AddAfter(int data, PNode p, PNode NewNode)
 
 void main()
 {
-    setlocale(LC_ALL, "ru");
     PNode Head, LastNode;
     int n;
     int k;
@@ -119,7 +118,7 @@ void main()
         for (int i = 0; i < y - 2; i++)
             q = q->Next;
         AddAfter(g, q, NewNode);
-
     }
     Show(Head);
+    DeleteNode(Head, q);
 }

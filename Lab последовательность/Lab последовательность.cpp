@@ -7,11 +7,11 @@ int main()
 	int a, min, c = 1, n = 0, b = 0;
 	while (b == 0)
 	{
-		cout << "\nвведите a" << endl;
+		cout << "\nenter a" << endl;
 		cin >> a;
 		if (a == 0)
 		{
-			cout << "\nпервый элемент должен быть отличен от нуля";
+			cout << "\nthe first element must be non-zero";
 			n++;
 		}
 		else
@@ -19,7 +19,7 @@ int main()
 			min = a;
 			while (a != 0)
 			{
-				cout << "введите a" << endl;
+				cout << "enter a" << endl;
 				cin >> a;
 				if (a != 0 && a < min)
 				{
@@ -29,12 +29,12 @@ int main()
 				if (a != 0 && a == min)
 					c++;
 			}
-			cout << "min = " << min << endl << "количество минимальных элементов = " << c << endl;
+			cout << "min = " << min << endl << "number of minimum elements = " << c << endl;
 			n = 0;
 		}
 		if (n == 3)
 		{
-			cout << ",программа остановлена" << endl;
+			cout << ",programm stoped" << endl;
 			b = 1;
 		}
 	}
